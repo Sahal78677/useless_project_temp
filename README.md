@@ -42,7 +42,7 @@ For Software:
 [commands]
 
 # Run
-[[commands]](https://chaos-1.vercel.app?_vercel_share=GMjZEX2bsdwvQJHI6gIQgh8ya3yaWZTN)
+(https://chaos-1.vercel.app?_vercel_share=GMjZEX2bsdwvQJHI6gIQgh8ya3yaWZTN)
 
 ### Project Documentation
 For Software:
@@ -56,8 +56,6 @@ For Software:
 
 
 ![Screenshot3](KEYBOARD PAGE)
-
-
 <img width="1870" height="833" alt="image" src="https://github.com/user-attachments/assets/cff3001b-6ed4-40bd-ae91-78c2d797884a" />
 
 
