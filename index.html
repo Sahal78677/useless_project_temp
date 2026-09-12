@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAOS // TYPING PROTOCOL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- THEME TOGGLE -->
+    <button id="theme-toggle" class="icon-btn">🌓</button>
 
+    <!-- CLICK TO START (Required for Audio Context) -->
+    <div id="click-to-start" class="fullscreen-overlay">
+        <h2 class="pulse-text">CLICK TO INITIALIZE SYSTEM</h2>
+    </div>
+
+    <!-- STUDIO INTRO (Free Fire / Garena style) -->
+    <div id="studio-intro" class="fullscreen-overlay hidden">
+        <h1 class="chaos-logo">
+            <span class="letter">C</span>
+            <span class="letter">H</span>
+            <span class="letter">A</span>
+            <span class="letter">O</span>
+            <span class="letter">S</span>
+        </h1>
+    </div>
+
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen" class="fullscreen-overlay hidden">
+        <div class="loader-content">
+            <h1 class="glitch-text" data-text="CONNECTING...">CONNECTING...</h1>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="loading-text">Loading Assets... 0%</p>
+        </div>
+    </div>
+
+    <!-- CHAOS TRANSITION OVERLAY -->
+    <div id="chaos-overlay" class="hidden"></div>
+
+    <!-- MAIN APP -->
+    <div class="game-container hidden" id="main-app">
+        
+        <!-- START SCREEN -->
+        <div id="start-screen" class="screen hidden">
+            <h1 class="title">CHAOS // <span class="highlight">TYPING</span></h1>
+            <p class="subtitle">SYSTEM OVERRIDE DETECTED. SELECT DIFFICULTY.</p>
+            <div class="difficulty-buttons">
+                <button class="btn diff-btn easy" data-time="8">EASY [8s]</button>
+                <button class="btn diff-btn med" data-time="5">NORMAL [5s]</button>
+                <button class="btn diff-btn hard" data-time="2">HARDCORE [2s]</button>
+            </div>
+        </div>
+
+        <!-- GAME SCREEN -->
+        <div id="game-screen" class="screen hidden">
+            <div class="hud">
+                <div class="hud-box">
+                    <span>ELAPSED</span>
+                    <div id="stopwatch">0.00s</div>
+                </div>
+                <div class="hud-box alert">
+                    <span>SYSTEM SHUFFLE</span>
+                    <div id="shuffle-timer">5.0s</div>
+                </div>
+            </div>
+
+            <div class="sentence-box" id="target-sentence"></div>
+
+            <div id="keyboard" class="keyboard disabled"></div>
+            
+            <div class="key-row space-row">
+                <button class="key spacebar disabled" id="key-space">SPACE</button>
+            </div>
+        </div>
+
+        <!-- RESULTS SCREEN -->
+        <div id="results-screen" class="screen hidden">
+            <h1 class="title">TEST <span class="highlight">COMPLETE</span></h1>
+            <div class="results-grid">
+                <div class="result-box">
+                    <span>WPM</span>
+                    <div id="result-wpm" class="highlight">0</div>
+                </div>
+                <div class="result-box">
+                    <span>ACCURACY</span>
+                    <div id="result-acc">0%</div>
+                </div>
+                <div class="result-box">
+                    <span>TIME (MIN)</span>
+                    <div id="result-time">0.00</div>
+                </div>
+            </div>
+            <button class="btn" id="restart-btn">REBOOT SYSTEM</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
